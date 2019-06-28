@@ -1,9 +1,17 @@
 // wins, losses, guesses left, array of words to choose from, chosen word, already guessed letters array, selected word array with spaces, lettersFound, lettersTotal, resetVariablesandUIFunction
 
-//
+// variables
 
+var wordBank = ["chiffonade", "saute", "poach", "bacon", "souffle"];
 
-var wordBank = ["chiffonade", "saute", "poach", "bacon", "souffle"]
+var word = wordBank[Math.floor(Math.random() * wordBank.length)];
+
+var gameBoard = [];
+for (var i = 0; i < word.length; i++) {
+    gameBoard[i] = "_";
+}
+
+var lettersLeft = word.length;
 
 // working key function //
 
